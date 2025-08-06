@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: rgb(17, 17, 17);
+    color: white; */
+    font-family: "Montserrat Alternates", sans-serif;
+
+}
+
+/* Styles for Navigation Bar */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1400px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: rgb(241, 242, 245);
+
+    margin: auto;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    padding: 5px;
+    border-radius: 10px;
+    /* outline: none; */
+}
+
+ul li {
+    margin: 10px;
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+}
+
+#login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login li {
+    list-style: none;
+    margin: 10px;
+}
+
+#signup {
+    background-color: rgb(68, 68, 209);
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+#hero {
+    height: 80vh;
+    color: white;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    
+    background-image: url(./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#search-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-items: center;
+    background-color: rgb(184, 191, 212);
+    height: 20vh;
+    border-radius: 5px;
+    max-width: 1200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    
+    margin: auto;
+}
+#search-section input, select {
+    border: none;
+    width: 100%;
+    margin: 10px 0;
+    padding: 5px;
+}
+
+
+footer {
+    background-color: rgb(241, 242, 245);
+    text-align: center;
+    max-width: 1400px;
+    margin: auto;
+    padding: 100px 0 30px 0;
+}
+
+hr {
+    width: 90%;
+}
+
+footer div ul li {
+    text-align: center;
+}
