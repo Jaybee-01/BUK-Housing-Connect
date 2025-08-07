@@ -18,7 +18,7 @@ header {
     left: 0;
     right: 0;
     background-color: rgb(241, 242, 245);
-
+    z-index: 9999;
     margin: auto;
 }
 
@@ -28,12 +28,6 @@ ul {
     align-items: center;
 }
 
-input {
-    padding: 5px;
-    border-radius: 10px;
-    /* outline: none; */
-}
-
 ul li {
     margin: 10px;
     list-style: none;
@@ -41,6 +35,9 @@ ul li {
 
 li a {
     text-decoration: none;
+    color: black;
+    opacity: 0.6;
+
 }
 
 #login {
@@ -62,6 +59,8 @@ li a {
     border-radius: 10px;
 }
 
+
+ /*Styles for main hero section */
 #hero {
     height: 80vh;
     color: white;
@@ -72,41 +71,141 @@ li a {
     align-items: center;
     margin: auto;
     text-align: center;
-    
+
     background-image: url(./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg);
     background-position: center;
     background-size: cover;
 }
 
+/* Styles for search details section */
 #search-section {
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    place-items: center;
+    place-items: center; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
     background-color: rgb(184, 191, 212);
-    height: 20vh;
+    height: 130px;
     border-radius: 5px;
     max-width: 1200px;
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 60px;
-    
+    bottom: 80px;
     margin: auto;
 }
-#search-section input, select {
-    border: none;
+
+#search-section input,
+select {
     width: 100%;
+
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
     margin: 10px 0;
-    padding: 5px;
 }
 
+/* styles for available houses */
+#main-card-container{
+    margin-top: 100px;
+    max-width: 1400px;
+    margin:  100px auto;
+}
+#main-card-container h2 {
+    margin: 50px 0 0 50px;
+}
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-family: Arial, sans-serif;
+    /* background-color: #f0f4fb; */
+    max-width: 1400px;
+    margin:  20px auto;
+}
 
+.card {
+    background-color: #e7f0fa;
+    width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.tag {
+    background-color: #cfe4ff;
+    color: #0c3c78;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.location {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 16px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #dbeafc;
+    padding: 12px 16px;
+}
+
+.icons {
+    display: flex;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.button {
+    background-color: white;
+    color: #0c3c78;
+    border: 1px solid #b4d4f8;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* end of styles for available houses */
 footer {
     background-color: rgb(241, 242, 245);
     text-align: center;
     max-width: 1400px;
     margin: auto;
-    padding: 100px 0 30px 0;
+    padding: 30px 0 30px 0;
 }
 
 hr {
