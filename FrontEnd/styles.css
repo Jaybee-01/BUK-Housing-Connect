@@ -17,6 +17,7 @@ header {
     position: fixed;
     left: 0;
     right: 0;
+    /* top: 10; */
     background-color: rgb(241, 242, 245);
     z-index: 9999;
     margin: auto;
@@ -100,11 +101,11 @@ li a {
 #search-section input,
 select {
     width: 100%;
-
     padding: 7px;
     border: none;
     border-radius: 10px;
     margin: 10px 0;
+    box-sizing: border-box;
 }
 
 /* styles for available houses */
@@ -119,13 +120,13 @@ select {
 #card-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     gap: 30px;
     font-family: Arial, sans-serif;
     /* background-color: #f0f4fb; */
     max-width: 1400px;
-    margin:  20px auto;
+    margin:  20px;
 }
 
 .card {
@@ -198,8 +199,9 @@ select {
     cursor: pointer;
     font-size: 14px;
 }
-
 /* end of styles for available houses */
+
+
 footer {
     background-color: rgb(241, 242, 245);
     text-align: center;
