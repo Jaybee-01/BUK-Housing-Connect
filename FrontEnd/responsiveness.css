@@ -1,4 +1,9 @@
 /* responsiveness for the header Main page */
+@media (max-width: 1344px) {
+  #card-container {
+        justify-content: center;
+    }
+}
 @media (max-width: 750px) {
     header {
         justify-content: space-between;
@@ -27,6 +32,9 @@
         margin: 160px auto 100px auto; 
 
     }
+    #card-container {
+        justify-content: center;
+    }
 
 }
 
@@ -35,3 +43,4 @@
         width: 80%;
     }
 }
+

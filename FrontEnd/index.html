@@ -44,7 +44,7 @@
         <section id="search-section">
             <div>
                 <label for="">Search Location</label> <br>
-                <input type="search">
+                <input type="search" id="searchInput">
             </div>
             <div>
                 <label for="priceRange">Price Range: <span id="priceValue">70,000</span></label> <br>
@@ -64,14 +64,29 @@
         <section id="main-card-container">
             <h2>Accomodation found: </h2>
             <section id="card-container">
-                <!-- card 1 --> 
+                <!-- card 1 -->
                 <div class="card" data-value="90000">
                     <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
                     <div class="card-content">
                         <div class="tag">Apartment</div>
-                        <div class="title">Modern 2–Bedroom Apartment</div>
-                        <div class="location">📍 Near New Campus</div>
-                        <div class="price" >N1,200 / month</div>
+                        <div class="title">1 – Single Room</div>
+                        <div class="location" data-location="rimin-gata">📍 Rimin-Gata</div>
+                        <div class="price">N90,000 / Year</div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="icons">
+                            🛏️ 2 &nbsp; 🚿 2
+                        </div>
+                        <button class="button"><a href="../details.html">View Details</a></button>
+                    </div>
+                </div>
+                <div class="card" data-value="100000">
+                    <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
+                    <div class="card-content">
+                        <div class="tag">Apartment</div>
+                        <div class="title">1 – Single Room Apartment</div>
+                        <div class="location" data-location="rimin-gata">📍Rimin-Gata</div>
+                        <div class="price">N100,000 / Year</div>
                     </div>
                     <div class="card-footer">
                         <div class="icons">
@@ -84,41 +99,26 @@
                     <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
                     <div class="card-content">
                         <div class="tag">Apartment</div>
-                        <div class="title">Modern 2–Bedroom Apartment</div>
-                        <div class="location">📍 Near New Campus</div>
-                        <div class="price" >N1,200 / month</div>
+                        <div class="title">1 – Single Room</div>
+                        <div class="location" data-location="rimin-gata">📍 Rimin-Gata</div>
+                        <div class="price">N70,000 / Year</div>
                     </div>
                     <div class="card-footer">
                         <div class="icons">
-                            🛏️ 2 &nbsp; 🚿 2
-                        </div>
-                        <button class="button"><a href="../details.html">View Details</a></button>
-                    </div>
-                </div>
-                <div class="card" data-value="70000">
-                    <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="tag">Apartment</div>
-                        <div class="title">Modern 2–Bedroom Apartment</div>
-                        <div class="location">📍 Near New Campus</div>
-                        <div class="price" >N1,200 / month</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="icons">
-                            🛏️ 2 &nbsp; 🚿 2
+                            🛏️ 0 &nbsp; 🚿 0
                         </div>
                         <button class="button"><a href="../details.html">View Details</a></button>
                     </div>
                 </div>
 
                 <!-- card 2 -->
-                <div class="card" data-value="80000">
+                <div class="card" data-value="150000">
                     <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
                     <div class="card-content">
                         <div class="tag">Apartment</div>
-                        <div class="title">Modern 2–Bedroom Apartment</div>
-                        <div class="location">📍 Near New Campus</div>
-                        <div class="price">N1,200 / month</div>
+                        <div class="title">Self-Con Apartment</div>
+                        <div class="location" data-location="dambare">📍 Opposite BUK New Site</div>
+                        <div class="price">N150,000 / Year</div>
                     </div>
                     <div class="card-footer">
                         <div class="icons">
@@ -636,7 +636,7 @@
             </div>
             <hr>
             <section>
-                &copy; 2025 BUK Housing Connect. All rights reserved.
+                <p> &copy; 2025 BUK Housing Connect. All rights reserved.</p>
             </section>
         </section>
     </footer>

@@ -8,6 +8,8 @@
 </head>
 <style>
     body {
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
         background-color: #E3F2FD;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -26,7 +28,6 @@
         background-color: #E3F2FD;
         color: black;
         z-index: 9999;
-        gap: 600px;
         border-bottom: 1px solid #c9deee;
 
         a {
@@ -63,7 +64,7 @@
     }
 
     #main {
-        width: 35%;
+        width: 40%;
         border: 1px solid #c9deee;
         border-radius: 5px;
         margin: 120px auto;
@@ -106,7 +107,7 @@
     }
 
     button a {
-        padding: 10px 60px;
+        padding: 10px 45px;
     }
 
     h1 {
@@ -178,11 +179,50 @@
     footer div ul li {
         text-align: center;
     }
+
+     @media (max-width: 985px) {
+        #main {
+            width: 65%
+        }
+    }
+
+    @media (max-width: 737px) {
+        #main {
+            width: 68%
+        }
+    }
+
+    @media (max-width: 704px) and (min-width: 250px) {
+        #main {
+            width: 92%;
+        }
+    }
+
+    @media (max-width: 704px) {
+        header h2 {
+            font-size: 1.2rem;
+        }
+
+        #login li {
+            font-size: 1rem;
+            margin: 5px;
+        }
+
+        footer h1 {
+            font-size: 1.3rem;
+        }
+    }
+
+    @media (max-width: 604px) {
+        header h2 {
+            font-size: 1.1rem;
+        }
+    }
 </style>
 
 <body>
     <!-- Navigation Bar -->
-    <header>
+    <header id="login-Header">
         <h2><a href="./FrontEnd/index.html">🏠BUK Housing Connect</a></h2>
         <div id="login">
             <li><a href="loginStudent.html">Login</a></li>
@@ -216,7 +256,7 @@
             <p>Your connection to the best student housing near Bayero University, Kano.</p>
             <hr>
             <section>
-                &copy; 2025 BUK Housing Connect. All rights reserved.
+                <p> &copy; 2025 BUK Housing Connect. All rights reserved.</p>
             </section>
         </section>
     </footer>
