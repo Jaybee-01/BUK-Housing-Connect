@@ -21,6 +21,7 @@
         align-items: center;
         max-width: 1400px;
         margin: auto;
+        padding: 13px;
         position: fixed;
         left: 0;
         right: 0;
@@ -35,6 +36,15 @@
             color: black;
         }
     }
+
+    header a {
+        width: 10%;
+    }
+
+    header img {
+        width: 100%;
+    }
+
 
     li a {
         text-decoration: none;
@@ -180,7 +190,7 @@
         text-align: center;
     }
 
-     @media (max-width: 985px) {
+    @media (max-width: 985px) {
         #main {
             width: 65%
         }
@@ -223,7 +233,9 @@
 <body>
     <!-- Navigation Bar -->
     <header id="login-Header">
-        <h2><a href="index.html">🏠BUK Housing Connect</a></h2>
+        <a href="index.html">
+            <img src="./img/main-logo.png" alt="">
+        </a>
         <div id="login">
             <li><a href="loginStudent.html">Login</a></li>
             <li><a href="signupStudent.html" id="signup">Sign Up</a></li>

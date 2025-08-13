@@ -22,6 +22,12 @@ header {
     z-index: 9999;
     margin: auto;
 }
+header a {
+    width: 13%;
+}
+header img {
+    width: 100%;
+}
 
 ul {
     display: flex;
