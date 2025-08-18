@@ -7,8 +7,12 @@
     <title>Details - Accomodation Finder</title>
 </head>
 <style>
-    /* Styles for Navigation Bar */
+    body {
+        margin: 0;
+        padding: 0;
+    }
 
+    /* Styles for Navigation Bar */
     header {
         display: flex;
         justify-content: space-around;
@@ -21,6 +25,14 @@
         background-color: rgb(241, 242, 245);
         z-index: 9999;
         margin: auto;
+    }
+
+    header a {
+        width: 13%;
+    }
+
+    header img {
+        width: 100%;
     }
 
     ul {
@@ -60,9 +72,127 @@
         border-radius: 10px;
     }
 
-    main {
-        height: 100vh;
+    /* code for the property details */
+    .property-container {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 1200px;
+        margin: 150px auto 50px auto;
     }
+
+
+    .image-section {
+        flex: 1;
+        min-width: 320px;
+    }
+
+    .main-image img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .image-list {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .image-list img {
+        width: 200px;
+        object-fit: cover;
+        height: 120px;
+        border-radius: 6px;
+        cursor: pointer;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .details-section {
+        flex: 1;
+        min-width: 320px;
+        background: #f9fcff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 4px 10px;
+        background: #d8ecff;
+        color: #004c8c;
+        font-size: 14px;
+        border-radius: 20px;
+        margin-bottom: 10px;
+    }
+
+    .location {
+        color: #555;
+    }
+
+    .price {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #007acc;
+    }
+
+    .price span {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+
+    .features {
+        display: flex;
+        gap: 20px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+        margin: 15px 0;
+    }
+
+    h3 {
+        margin-top: 15px;
+    }
+
+    .description {
+        line-height: 1.5;
+        color: #444;
+    }
+
+    .landlord {
+        margin-bottom: 20px;
+    }
+
+    .book-btn {
+        width: 100%;
+        padding: 12px;
+        background: #4da6ff;
+        border: none;
+        color: white;
+        font-size: 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .book-btn a {
+        padding: 13px 43%;
+        text-decoration: none;
+        color: white;
+    }
+
+    .book-btn:hover {
+        background: #0066cc;
+    }
+
+
+
+
+    /* code for the footer */
 
     footer {
         background-color: rgb(241, 242, 245);
@@ -84,34 +214,69 @@
 <body>
     <!-- Navigation Bar -->
     <header>
-        <h2><a href="index.html">🏠BUK Housing Connect</a></h2>
-        <nav>
+        <a href="/FrontEnd/index.html">
+            <img src="../img/main-logo.png" alt="">
+        </a>
+        <!-- <nav>
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">About us</a></li>
                 <li><a href="">Services</a></li>
             </ul>
-        </nav>
+        </nav> -->
         <div id="login">
             <li><a href="loginStudent.html">Login</a></li>
             <li><a href="signupStudent.html" id="signup">Sign Up</a></li>
         </div>
     </header>
     <main>
-        <section>
-            <img src="" alt="">
-        </section>
-        <section>
+        <section class="property-container">
+            <!-- Left Section: Images -->
+            <div class="image-section">
+                <div class="main-image">
+                    <img src="../img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="Property Image">
+                </div>
+                <div class="image-list">
+                    <img src="../img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
+                    <img src="../img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
+                    <img src="../img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
+                    <img src="../img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
+                </div>
+            </div>
 
+            <!-- Right Section: Details -->
+            <div class="details-section">
+                <span class="tag">Apartment</span>
+                <h2>Modern 2–Bedroom Apartment</h2>
+                <p class="location">📍 Near New Campus</p>
+                <p class="price">$ 1,200 <span>/ month</span></p>
+
+                <div class="features">
+                    <p>🛏 2 Bedrooms</p>
+                    <p>🚿 2 Bathrooms</p>
+                </div>
+
+                <h3>About this property</h3>
+                <p class="description">
+                    A wonderful and spacious apartment conveniently located near new campus. Features 2 bedrooms and 2
+                    bathrooms, perfect for students looking for comfort and convenience. Don't miss out on this
+                    fantastic opportunity!
+                </p>
+
+                <h3>Landlord Information</h3>
+                <p class="landlord">👤 Mr. John Doe | 📧 johndoe@example.com</p>
+
+                <button class="book-btn"><a href="book.html">Book Now</a></button>
+            </div>
         </section>
+
     </main>
 
     <!-- footer section -->
     <footer>
         <section>
-            <a href="#">
-                <img src="./img/main-logo.png" alt="">
-            </a>
+            <img src="../img/main-logo.png" alt="" width="150px">
+            <!-- <h1>🏠BUK Housing Connect</h1> -->
             <p>Your connection to the best student housing near Bayero University, Kano</p>
             <div>
                 <ul>
@@ -122,7 +287,7 @@
             </div>
             <hr>
             <section>
-                &copy; 2025 BUK Housing Connect. All rights reserved.
+                <p> &copy; 2025 BUK Housing Connect. All rights reserved.</p>
             </section>
         </section>
     </footer>

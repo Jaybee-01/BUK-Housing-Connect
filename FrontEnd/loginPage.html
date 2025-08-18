@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Student Page - Accomodation Finder</title>
+    <link rel="stylesheet" href="./CSS/loginPage.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <a href="index.html">
+            <img src="./img/main-logo.png" alt="">
+        </a>
+        <div id="login">
+            <li><a href="loginPage.html">Login</a></li>
+            <li><a href="signupPage.html" id="signup">Sign Up</a></li>
+        </div>
+    </header>
+
+
+    <!-- main section -->
+    <section class="form-container">
+        <section>
+            <h1> Welcome Back!</h1>
+            <p>Login to access your account</p>
+            <div id="logtype">
+                <button class="btn active" id="studentBtn">Student</button>
+                <button class="btn" id="landlordBtn">Landlord</button>
+            </div>
+        </section>
+
+        <!-- Login form for student -->
+        <form action="" class="form active" id="studentForm">
+            <label for="email">Email</label> <br>
+            <input id="email" type="text" placeholder="example123@gmail.com"> <br> <br>
+            <label for="password">Password</label> <br>
+            <input type="password" placeholder="**********"> <br><br>
+            <button><a href="index.html">Login as Student</a></button>
+            <p>Don't have an account? <a href="signupStudent.html">Sign up</a> </p>
+        </form>
+
+
+        <!-- login form for landlord -->
+        <form action="" class="form" id="landlordForm">
+            <label for="email">Email</label> <br>
+            <input id="email" type="text" placeholder="example123@gmail.com"> <br> <br>
+            <label for="password">Password</label> <br>
+            <input type="password" placeholder="**********"> <br><br>
+            <button><a href="index.html">Login as Landlord</a></button>
+            <p>Don't have an account? <a href="signupStudent.html">Sign up</a> </p>
+        </form>
+    </section>
+
+
+
+
+
+    <footer>
+        <section>
+            <img src="img/main-logo.png" alt="" width="150px">
+            <!-- <h1>🏠BUK Housing Connect</h1> -->
+            <p>Your connection to the best student housing near Bayero University, Kano.</p>
+            <hr>
+            <section>
+                <p>&copy;2025 BUK Housing Connect. All rights reserved.</p>
+            </section>
+        </section>
+    </footer>
+
+
+    <script src="./JS/loginPage.js"></script>
+</body>
+
+</html>

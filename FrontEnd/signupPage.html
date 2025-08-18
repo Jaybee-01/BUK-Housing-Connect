@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Student Page - Accomodation Finder</title>
+    <link rel="stylesheet" href="./CSS/signupPage.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <a href="index.html">
+            <img src="./img/main-logo.png" alt="">
+        </a>
+        <div id="login">
+            <li><a href="loginPage.html">Login</a></li>
+            <li><a href="signupPage.html" id="signup">Sign Up</a></li>
+        </div>
+    </header>
+
+    <section class="form-container">
+        <section>
+            <h1>Create an Account</h1>
+            <p>Join our community of Students and Landlords</p>
+            <div id="logtype">
+                <button class="btn active" id="studentBtn">I'm a Student</button>
+                <button class="btn" id="landlordBtn">I'm a Landlord</button>
+            </div>
+        </section>
+
+        <!-- sign up for student -->
+        <form action="" class="form active" id="studentForm">
+            <label for="email">Full Name</label> <br>
+            <input id="email" type="text" placeholder="John Doe"> <br> <br>
+            <label for="email">Email</label> <br>
+            <input id="email" type="text" placeholder="example123@gmail.com"> <br> <br>
+            <label for="password">Password</label> <br>
+            <input type="password" placeholder="**********"> <br><br>
+            <label for="password">Confirm Password</label> <br>
+            <input type="password" placeholder="**********"> <br><br>
+            <button><a href="index.html">Create Student Account</a></button>
+            <p>Already have an account? <a href="loginStudent.html">Log in</a> </p>
+        </form>
+
+        <!-- sign up for landlord -->
+        <form action="" class="form" id="landlordForm">
+            <label for="email">Full Name</label> <br>
+            <input id="email" type="text" placeholder="John Doe"> <br> <br>
+            <label for="email">Email</label> <br>
+            <input id="email" type="text" placeholder="example123@gmail.com"> <br> <br>
+            <label for="password">Password</label> <br>
+            <input type="password" placeholder="**********"> <br><br>
+            <label for="password">Confirm Password</label> <br>
+            <input type="password" placeholder="**********"> <br><br>
+            <button><a href="index.html">Create Landlord Account</a></button>
+            <p>Already have an account? <a href="./loginStudent.html">Log in</a> </p>
+        </form>
+    </section>
+
+
+    <footer>
+        <section>
+            <img src="img/main-logo.png" alt="" width="150px">
+            <!-- <h1>🏠BUK Housing Connect</h1> -->
+            <p>Your connection to the best student housing near Bayero University, Kano.</p>
+            <hr>
+            <section>
+                <p> &copy; 2025 BUK Housing Connect. All rights reserved.</p>
+            </section>
+        </section>
+    </footer>
+
+    <script src="./JS/signupPage.js"></script>
+</body>
+
+</html>
