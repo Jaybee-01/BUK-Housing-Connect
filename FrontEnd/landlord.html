@@ -18,7 +18,7 @@
 <body>
     <!-- Navigation Bar -->
     <header>
-        <a href="../FrontEnd/index.html">
+        <a href="index.html">
             <img src="./img/main-logo.png" alt="">
         </a>
 
@@ -29,15 +29,15 @@
     </header>
 
     <main>
-        <section id="new-property" class="property active">
+        <section id="new-property">
             <div id="welcome">
                 <h2>Welcome, name!</h2>
                 <div>
-                    <button>Add New Property</button>
-                    <button>Cancel</button>
+                    <button id="addNew">Add New Property</button>
+                    <button id="close" class="active">Cancel</button>
                 </div>
             </div>
-            <form action="" id="form">
+            <form action="" id="propertyForm" class="property active">
                 <h3>Add a New Property</h3>
 
                 <div id="sec-1">
@@ -51,28 +51,27 @@
                     </div>
                 </div>
                 <label for="imageURL">image URL</label>
-                <input type="text" name="imageURL" id="imageURL" placeholder="https://placehold.co/600x400.png">
+                <input type="text" name="imageURL" id="image" placeholder="https://placehold.co/600x400.png">
 
                 <div id="sec-1">
                     <div>
                         <label for="">Price / Yearly</label>
-                        <input type="number" placeholder="0">
+                        <input type="number" id="price" placeholder="0">
                     </div>
                     <div>
                         <label for="">Contact</label>
-                        <input type="number" placeholder="0">
+                        <input type="number" id="contact" placeholder="0">
                     </div>
                     <div>
                         <label for="">Property Type</label>
-                        <select name="" id="">
-                            <option value="">Apartment</option>
-                            <option value="">Self Contain</option>
-                            <option value="">Single Room</option>
-                            <option value="">Room and Parlour</option>
+                        <select name="" id="type">
+                            <option value="Apartment">Apartment</option>
+                            <option value="Self Contain">Self Contain</option>
+                            <option value="Single Room">Single Room</option>
                         </select>
                     </div>
                 </div>
-                <button>Add Property</button>
+                <button type="submit">Add Property</button>
             </form>
 
 
@@ -85,6 +84,7 @@
                     <tr>
                         <th>Title</th>
                         <th>Location</th>
+                        <th>Image</th>
                         <th>Price</th>
                         <th>Contact</th>
                         <th>Type</th>
@@ -120,16 +120,54 @@
 
 
 
-    <script src="./JS/app.js">
-        // function openForm() {
-        //     document.getElementById("pageContent").classList.add("blurred");
-        //     document.getElementById("formWrapper").style.display = "block";
-        // }
+    <script>
 
-        // function closeForm() {
-        //     document.getElementById("pageContent").classList.remove("blurred");
-        //     document.getElementById("formWrapper").style.display = "none";
-        // }
+// this is to toggle the add new property form
+        document.getElementById('addNew').addEventListener('click', function () {
+            document.getElementById('propertyForm').classList.remove('active');
+            document.getElementById('addNew').classList.add('active');
+            document.getElementById('close').classList.remove('active');
+        });
+
+        document.getElementById('close').addEventListener('click', function () {
+            document.getElementById('propertyForm').classList.add('active');
+            document.getElementById('addNew').classList.remove('active');
+            document.getElementById('close').classList.add('active');
+        });
+
+
+// this is to add a new property to the table
+        document.getElementById('propertyForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+
+            const title = document.getElementById('title').value;
+            const location = document.getElementById('location').value;
+            const image = document.getElementById('image').value;
+            const price = document.getElementById('price').value;
+            const contact = document.getElementById('contact').value;
+            const type = document.getElementById('type').value;
+
+
+            const table = document.getElementById('propertyTable').getElementsByTagName('tbody')[0];
+
+            const newRow = table.insertRow();
+
+            newRow.innerHTML = `
+            <td>${title}</td>
+            <td>${location}</td>
+            <td>${image}</td>
+            <td>${price}</td>
+            <td>${contact}</td>
+            <td>${type}</td>
+            `;
+
+
+
+// this is to reset the form after submission
+        document.getElementById('propertyForm').reset();
+        })
+
     </script>
     </script>
 </body>

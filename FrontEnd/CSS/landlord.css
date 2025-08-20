@@ -58,6 +58,7 @@ li a {
 #login li {
     list-style: none;
     margin: 10px;
+    margin: 20px;
 }
 
 #signup {
@@ -69,7 +70,6 @@ li a {
 }
 
 main {
-    height: 100vh;
     max-width: 1300px;
     margin: 90px auto 0px auto;
     box-sizing: border-box;
@@ -78,7 +78,10 @@ main {
 
 .property {
     margin: 10px;
+}
 
+.active {
+    display: none;
 }
 
 #welcome {
@@ -96,8 +99,7 @@ main {
     font-size: 1.1rem;
 }
 
-#form {
-    /* display: none; */
+#propertyForm {
     width: 100%;
     padding: 5px 0;
     box-sizing: border-box;
@@ -108,7 +110,7 @@ main {
     padding: 0px 20px 20px 20px;
 }
 
-#form button {
+#propertyForm button {
     padding: 10px;
     border: none;
     border-radius: 10px;
@@ -153,6 +155,10 @@ select {
     margin: 10px;
     border: 1px solid rgb(222, 224, 231);
     padding: 20px;
+}
+table{
+    height: auto;
+
 }
 table, th, td {
     border: 1px solid #ddd;
