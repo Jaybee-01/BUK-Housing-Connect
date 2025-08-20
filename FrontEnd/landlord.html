@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landlord - Accomodation Finder</title>
+    <link rel="icon" href="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg">
+    <link rel="stylesheet" href="./CSS/landlord.css">
+    <link rel="stylesheet" href="./CSS/responsiveness.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <a href="../FrontEnd/index.html">
+            <img src="./img/main-logo.png" alt="">
+        </a>
+
+        <div id="login">
+            <li><a href="loginPage.html">Login</a></li>
+            <li><a href="signupPage.html" id="signup">Sign Up</a></li>
+        </div>
+    </header>
+
+    <main>
+        <section id="new-property" class="property active">
+            <div id="welcome">
+                <h2>Welcome, name!</h2>
+                <div>
+                    <button>Add New Property</button>
+                    <button>Cancel</button>
+                </div>
+            </div>
+            <form action="" id="form">
+                <h3>Add a New Property</h3>
+
+                <div id="sec-1">
+                    <div>
+                        <label for="title">Propery Title</label> <br>
+                        <input type="text" name="title" id="title" placeholder="e.g Modern Self Contain">
+                    </div>
+                    <div>
+                        <label for="location">Location</label> <br>
+                        <input type="text" name="location" id="location" placeholder="e.g, Dambare">
+                    </div>
+                </div>
+                <label for="imageURL">image URL</label>
+                <input type="text" name="imageURL" id="imageURL" placeholder="https://placehold.co/600x400.png">
+
+                <div id="sec-1">
+                    <div>
+                        <label for="">Price / Yearly</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                    <div>
+                        <label for="">Contact</label>
+                        <input type="number" placeholder="0">
+                    </div>
+                    <div>
+                        <label for="">Property Type</label>
+                        <select name="" id="">
+                            <option value="">Apartment</option>
+                            <option value="">Self Contain</option>
+                            <option value="">Single Room</option>
+                            <option value="">Room and Parlour</option>
+                        </select>
+                    </div>
+                </div>
+                <button>Add Property</button>
+            </form>
+
+
+        </section>
+
+        <section id="table">
+            <h3>Property</h3>
+            <table id="propertyTable">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Location</th>
+                        <th>Price</th>
+                        <th>Contact</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- footer section -->
+    <footer>
+        <section>
+            <img src="img/main-logo.png" alt="" width="200px">
+            <!-- <h1>🏠BUK Housing Connect</h1> -->
+            <p>Your connection to the best student housing near Bayero University, Kano</p>
+            <div>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="">Services</a></li>
+                </ul>
+            </div>
+            <hr>
+            <section>
+                <p> &copy; 2025 BUK Housing Connect. All rights reserved.</p>
+            </section>
+        </section>
+    </footer>
+
+
+
+    <script src="./JS/app.js">
+        // function openForm() {
+        //     document.getElementById("pageContent").classList.add("blurred");
+        //     document.getElementById("formWrapper").style.display = "block";
+        // }
+
+        // function closeForm() {
+        //     document.getElementById("pageContent").classList.remove("blurred");
+        //     document.getElementById("formWrapper").style.display = "none";
+        // }
+    </script>
+    </script>
+</body>
+
+</html>
