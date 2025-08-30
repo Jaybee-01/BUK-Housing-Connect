@@ -1,31 +1,3 @@
-// this is for the index.html file
-// to display welcome message at the navbar if user is logged in
-
-// var user = localStorage.getItem("user");
-
-// if (user) {
-//   var parsedUser = JSON.parse(user);
-//   document.getElementById(
-//     "WelcomeMessage"
-//   ).innerHTML = `Welcome, ${parsedUser.name}`;
-//   document.getElementById("loginBtn").style.display = "none";
-//   document.getElementById("signup").style.display = "none";
-//   document.getElementById("logout").classList.remove("hidden");
-// } else {
-//   document.getElementById("loginBtn").style.display = "block";
-//   document.getElementById("signup").style.display = "block";
-//   document.getElementById("logout").classList.add("hidden");
-// }
-// const logoutBtn = document.getElementById("logout");
-// if (logoutBtn) {
-//   logoutBtn.addEventListener("click", function () {
-//     localStorage.removeItem("user");
-//     window.location.href = "loginPage.html";
-//   });
-// }
-
-
-
 // for the loginPage.html file
 // to handle login functionality for students
 document

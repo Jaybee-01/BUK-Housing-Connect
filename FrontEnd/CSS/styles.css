@@ -65,7 +65,14 @@ li a {
     border: none;
     border-radius: 10px;
 }
-
+.signup {
+    background-color: rgb(68, 68, 209);
+    margin: 10px 10px;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
 .hidden {
     display: none;
 }
