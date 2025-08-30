@@ -31,31 +31,31 @@
         </section>
 
         <!-- sign up for student -->
-        <form action="" class="form active" id="studentForm">
-            <label for="email">Full Name</label> <br>
-            <input id="email" type="text" placeholder="John Doe"> <br> <br>
-            <label for="email">Email</label> <br>
-            <input id="email" type="text" placeholder="example123@gmail.com"> <br> <br>
-            <label for="password">Password</label> <br>
-            <input type="password" placeholder="**********"> <br><br>
-            <label for="password">Confirm Password</label> <br>
-            <input type="password" placeholder="**********"> <br><br>
-            <button><a href="index.html">Create Student Account</a></button>
-            <p>Already have an account? <a href="loginStudent.html">Log in</a> </p>
+        <form action="" class="form active" id="studentSignUpForm">
+            <label for="studentName">Full Name</label> <br>
+            <input id="studentName" type="text" placeholder="John Doe" required> <br> <br>
+            <label for="studentEmail">Email</label> <br>
+            <input id="studentEmail" type="text" placeholder="example123@gmail.com" autocomplete="off" required> <br> <br>
+            <label for="studentPassword">Password</label> <br>
+            <input id="studentPassword" type="password" placeholder="Password" autocomplete="new-password" required> <br><br>
+            <label for="confirmPassword">Confirm Password</label> <br>
+            <input id="confirmPassword" type="password" placeholder="Confirm password" required> <br><br>
+            <button type="submit">Create Student Account</button>
+            <p>Already have an account? <a href="../FrontEnd/loginPage.html">Log in</a> </p>
         </form>
 
         <!-- sign up for landlord -->
-        <form action="" class="form" id="landlordForm">
-            <label for="email">Full Name</label> <br>
-            <input id="email" type="text" placeholder="John Doe"> <br> <br>
-            <label for="email">Email</label> <br>
-            <input id="email" type="text" placeholder="example123@gmail.com"> <br> <br>
-            <label for="password">Password</label> <br>
-            <input type="password" placeholder="**********"> <br><br>
-            <label for="password">Confirm Password</label> <br>
-            <input type="password" placeholder="**********"> <br><br>
-            <button><a href="index.html">Create Landlord Account</a></button>
-            <p>Already have an account? <a href="./loginStudent.html">Log in</a> </p>
+        <form action="" class="form" id="landlordSignUpForm">
+            <label for="landlordName">Full Name</label> <br>
+            <input id="landlordName" type="text" placeholder="John Doe"  required> <br> <br>
+            <label for="landlordEmail">Email</label> <br>
+            <input id="landlordEmail" type="text" placeholder="example123@gmail.com" required> <br> <br>
+            <label for="landlordPassword">Password</label> <br>
+            <input id="landlordPassword" type="password" placeholder="Password" required> <br><br>
+            <label for="landlordConPassword">Confirm Password</label> <br>
+            <input id="landlordConPassword" type="password" placeholder="Confirm password" required> <br><br>
+            <button type="submit">Create Landlord Account</button>
+            <p>Already have an account? <a href="../FrontEnd/loginPage.html">Log in</a> </p>
         </form>
     </section>
 
@@ -73,6 +73,7 @@
     </footer>
 
     <script src="./JS/signupPage.js"></script>
+    <script src="../FrontEnd/JS/authSignUp.js"></script>
 </body>
 
 </html>

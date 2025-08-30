@@ -2,8 +2,8 @@
 
 const studentBtn = document.getElementById("studentBtn");
 const landlordBtn = document.getElementById("landlordBtn");
-const studentForm = document.getElementById("studentForm");
-const landlordForm = document.getElementById("landlordForm");
+const studentForm = document.getElementById("studentLoginForm");
+const landlordForm = document.getElementById("landlordLoginForm");
 
 studentBtn.addEventListener("click", () => {
   studentForm.classList.add("active");

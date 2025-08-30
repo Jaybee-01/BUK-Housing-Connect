@@ -20,3 +20,22 @@ priceRange.addEventListener("input", () => {
     }
   });
 });
+
+
+// code to handle the protected button click
+
+function isLoggedIn() {
+  return localStorage.getItem("user") !== null;
+}
+
+document.getElementById("protectedBtn").addEventListener("click", function() {
+  const user = localStorage.getItem("user"); 
+
+  if(!isLoggedIn()){
+    alert("You must be logged in to view details.");  
+    window.location.href = "../FrontEnd/loginPage.html";
+  } else {
+    window.location.href = "../FrontEnd/details.html";
+  }
+
+});

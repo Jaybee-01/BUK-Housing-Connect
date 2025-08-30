@@ -66,6 +66,9 @@ li a {
     border-radius: 10px;
 }
 
+.hidden {
+    display: none;
+}
 
 /*Styles for main hero section */
 #hero {

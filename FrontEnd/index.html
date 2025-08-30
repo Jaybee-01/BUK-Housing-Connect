@@ -29,8 +29,13 @@
             </ul>
         </nav>
         <div id="login">
-            <li><a href="loginPage.html">Login</a></li>
+            <h1 id="WelcomeMessage"></h1>
+            <li><a href="loginPage.html" id="loginBtn">Login</a></li>
             <li><a href="signupPage.html" id="signup">Sign Up</a></li>
+           
+            <!-- this shows when logged in -->
+             <h3 class="">Welcome</h3>
+            <button id="logout" class="hidden logout">Logout</button>
         </div>
     </header>
     <main>
@@ -79,163 +84,9 @@
                         <div class="icons">
                             🛏️ 2 &nbsp; 🚿 2
                         </div>
-                        <button class="button"><a href="../FrontEnd/details.html">View Details</a></button>
+                        <button id="protectedBtn" class="button">View Details</button>
                     </div>
                 </div>
-
-                <!-- card 2 -->
-                <div class="card" data-value="80000">
-                    <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="tag">Apartment</div>
-                        <div class="title">1 – Single Room Apartment</div>
-                        <div class="location" data-location="rimin-gata">📍Rimin-Gata</div>
-                        <div class="price">N80,000 / Year</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="icons">
-                            🛏️ 2 &nbsp; 🚿 2
-                        </div>
-                        <button class="button"><a href="../details.html">View Details</a></button>
-                    </div>
-                </div>
-
-                <!-- card 3 -->
-                <div class="card" data-value="80000">
-                    <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="tag">Apartment</div>
-                        <div class="title">1 – Single Room</div>
-                        <div class="location" data-location="rimin-gata">📍 Rimin-Gata</div>
-                        <div class="price">N80,000 / Year</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="icons">
-                            🛏️ 0 &nbsp; 🚿 0
-                        </div>
-                        <button class="button"><a href="../details.html">View Details</a></button>
-                    </div>
-                </div>
-
-                <!-- card 4 -->
-                <div class="card" data-value="150000">
-                    <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="tag">Apartment</div>
-                        <div class="title">Self-Con Apartment</div>
-                        <div class="location" data-location="dambare">📍 Opposite BUK New Site</div>
-                        <div class="price">N150,000 / Year</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="icons">
-                            🛏️ 2 &nbsp; 🚿 2
-                        </div>
-                        <button class="button">View Details</button>
-                    </div>
-                </div>
-
-                <!-- card 5 -->
-                <div class="card" data-value="80000">
-                    <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="tag">Apartment</div>
-                        <div class="title">Modern 2–Bedroom Apartment</div>
-                        <div class="location">📍 Near New Campus</div>
-                        <div class="price">N80,000 / Year</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="icons">
-                            🛏️ 2 &nbsp; 🚿 2
-                        </div>
-                        <button class="button">View Details</button>
-                    </div>
-                </div>
-
-                <!-- card 6 -->
-                <div class="card" data-value="150000">
-                    <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="tag">Apartment</div>
-                        <div class="title">Modern 2–Bedroom Apartment</div>
-                        <div class="location">📍 Near New Campus</div>
-                        <div class="price">N150,000 / Year</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="icons">
-                            🛏️ 2 &nbsp; 🚿 2
-                        </div>
-                        <button class="button">View Details</button>
-                    </div>
-                </div>
-
-                <!-- card 7 -->
-                <div class="card" data-value="80000">
-                    <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="tag">Apartment</div>
-                        <div class="title">Modern 2–Bedroom Apartment</div>
-                        <div class="location">📍 Near New Campus</div>
-                        <div class="price">N80,000 / Year</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="icons">
-                            🛏️ 2 &nbsp; 🚿 2
-                        </div>
-                        <button class="button">View Details</button>
-                    </div>
-                </div>
-
-                <!-- card 8 -->
-                <div class="card" data-value="150000">
-                    <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="tag">Apartment</div>
-                        <div class="title">Modern 2–Bedroom Apartment</div>
-                        <div class="location">📍 Near New Campus</div>
-                        <div class="price">N150,000 / Year</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="icons">
-                            🛏️ 2 &nbsp; 🚿 2
-                        </div>
-                        <button class="button">View Details</button>
-                    </div>
-                </div>
-                
-                <!-- card 9 -->
-                <div class="card" data-value="100000">
-                    <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="tag">Apartment</div>
-                        <div class="title">Modern 2–Bedroom Apartment</div>
-                        <div class="location">📍 Near New Campus</div>
-                        <div class="price">N100,000 / Year</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="icons">
-                            🛏️ 2 &nbsp; 🚿 2
-                        </div>
-                        <button class="button">View Details</button>
-                    </div>
-                </div>
-
-                <!-- card 10 -->
-                <div class="card" data-value="200000">
-                    <img src="./img/lucas-newton-xDU1mH2Ec_E-unsplash.jpg" alt="">
-                    <div class="card-content">
-                        <div class="tag">Apartment</div>
-                        <div class="title">Modern 2–Bedroom Apartment</div>
-                        <div class="location">📍 Near New Campus</div>
-                        <div class="price">N200,000 / Year</div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="icons">
-                            🛏️ 2 &nbsp; 🚿 2
-                        </div>
-                        <button class="button">View Details</button>
-                    </div>
-                </div>
-
             </section>
         </section>
     </main>
@@ -265,6 +116,7 @@
 
 
     <script src="./JS/app.js"></script>
+    <script src="./JS/auth.js"></script>
 </body>
 
 </html>

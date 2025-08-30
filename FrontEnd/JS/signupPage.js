@@ -1,8 +1,8 @@
 // code to switch between student login page and landlord page
 const studentBtn = document.getElementById("studentBtn");
 const landlordBtn = document.getElementById("landlordBtn");
-const studentForm = document.getElementById("studentForm");
-const landlordForm = document.getElementById("landlordForm");
+const studentForm = document.getElementById("studentSignUpForm");
+const landlordForm = document.getElementById("landlordSignUpForm");
 
 studentBtn.addEventListener("click", () => {
   studentForm.classList.add("active");
