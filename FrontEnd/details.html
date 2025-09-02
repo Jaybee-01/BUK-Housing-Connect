@@ -59,7 +59,7 @@
     li a {
         text-decoration: none;
         color: black;
-        opacity: 0.6;
+        /* opacity: 0.6; */
 
     }
 
@@ -77,6 +77,20 @@
     #signup {
         background-color: rgb(68, 68, 209);
         padding: 10px;
+        color: white;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    .signup {
+        background-color: rgb(68, 68, 209);
+        margin: 10px 10px;
+        padding: 10px;
+        font-size: 18px;
         color: white;
         border: none;
         border-radius: 10px;
@@ -302,16 +316,13 @@
         <a href="/FrontEnd/index.html">
             <img src="../FrontEnd/img/main-logo.png" alt="">
         </a>
-        <!-- <nav>
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About us</a></li>
-                <li><a href="">Services</a></li>
-            </ul>
-        </nav> -->
         <div id="login">
-            <li><a href="loginStudent.html">Login</a></li>
+            <li><a href="loginStudent.html" id="loginBtn">Login</a></li>
             <li><a href="signupStudent.html" id="signup">Sign Up</a></li>
+
+            <!-- this shows when logged in -->
+            <h4 class="hidden" id="userInfo">Welcome</h4>
+            <button id="logout" class="hidden signup">Logout</button>
         </div>
     </header>
     <main id="main-section">
@@ -395,6 +406,47 @@
     </footer>
 
     <script>
+
+        // this is for the navbar which user logged in
+        window.onload = function () {
+            const user = JSON.parse(localStorage.getItem("user"));
+
+            const loginBtn = document.getElementById("loginBtn");
+            const signupBtn = document.getElementById("signup");
+            const userInfo = document.getElementById("userInfo");
+            const logoutBtn = document.getElementById("logout");
+
+            if (user) {
+                loginBtn.style.display = "none";
+                signupBtn.style.display = "none";
+
+                userInfo.style.display = "block";
+                userInfo.textContent = `${user.role === "student" ? "Welcome" : "Welcome"
+                    }: ${user.name.split(" ")[0]}`;
+                logoutBtn.style.display = "block";
+            } else {
+                loginBtn.style.display = "block";
+                signupBtn.style.display = "block";
+
+                userInfo.style.display = "none";
+                logoutBtn.style.display = "none";
+            }
+
+            // logout functionality
+            logoutBtn.addEventListener("click", function () {
+                if (user) {
+                    localStorage.removeItem("user");
+
+                    if (user.role === "student") {
+                        window.location.href = "../FrontEnd/loginPage.html";
+                    } else {
+                        window.location.href = "../FrontEnd/landlordLogin.html";
+                    }
+                }
+            });
+        };
+
+        // this is for the close and open of the booking request form
         const bookNow = document.getElementById('bookNow')
         const closeBtn = document.getElementById('close')
         const mainSection = document.getElementById('main-section')

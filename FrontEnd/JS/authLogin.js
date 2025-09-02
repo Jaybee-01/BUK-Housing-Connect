@@ -13,11 +13,16 @@ document
 
     if (user) {
       var parsedUser = JSON.parse(user);
-      if (parsedUser.password === studentPassword) {
-        localStorage.setItem("user", JSON.stringify(parsedUser));
-        window.location.href = "../FrontEnd/index.html";
+      if (parsedUser.role === "student") {
+        if (parsedUser.password === studentPassword) {
+          localStorage.setItem("user", JSON.stringify(parsedUser));
+          alert("Login successful");
+          window.location.href = "../FrontEnd/index.html";
+        } else {
+          alert("Incorrect username or password");
+        }
       } else {
-        alert("Incorrect password");
+        alert("User not found");
       }
     } else {
       alert("User not found");
@@ -37,12 +42,16 @@ document
 
     if (user) {
       var parsedUser = JSON.parse(user);
-      if (parsedUser.password === landlordPassword) {
-        localStorage.setItem("user", JSON.stringify(parsedUser));
-        alert("Login successful");
-        window.location.href = "../frontEnd/landlord.html";
+      if (parsedUser.role === "landlord") {
+        if (parsedUser.password === landlordPassword) {
+          localStorage.setItem("user", JSON.stringify(parsedUser));
+          alert("Login successful");
+          window.location.href = "../frontEnd/landlord.html";
+        } else {
+          alert("Incorrect username or password");
+        }
       } else {
-        alert("Incorrect password");
+        alert("User not found");
       }
     } else {
       alert("User not found");

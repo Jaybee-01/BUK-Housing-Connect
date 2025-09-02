@@ -7,14 +7,16 @@ window.onload = function () {
   const userInfo = document.getElementById("userInfo");
   const logoutBtn = document.getElementById("logout");
 
-  if(user){
+  if (user) {
     loginBtn.style.display = "none";
     signupBtn.style.display = "none";
 
     userInfo.style.display = "block";
-    userInfo.textContent = `${user.role === 'student' ? 'Student' : 'Landlord'}: ${user.name}`;
+    userInfo.textContent = `${
+      user.role === "student" ? "Welcome" : "Welcome Mr."
+    } ${user.name.split(" ")[0]}`;
     logoutBtn.style.display = "block";
-  } else{
+  } else {
     loginBtn.style.display = "block";
     signupBtn.style.display = "block";
 
@@ -24,17 +26,19 @@ window.onload = function () {
 
   // logout functionality
   logoutBtn.addEventListener("click", function () {
-    if(user){
+    if (user) {
       localStorage.removeItem("user");
-      
-      if(user.role === 'student'){
-        window.location.href = "../FrontEnd/loginPage.html";
-      } else{
-        window.location.href = "../FrontEnd/landlordLogin.html";
-    }
-  }
-   });
 
+      if (user.role === "student") {
+        window.location.href = "../FrontEnd/loginPage.html";
+      } else {
+        window.location.href = "../FrontEnd/index.html";
+      }
+    }
+  });
+};
+
+// Functionality for the search detao;s section
 // code for the range input to display the value
 const priceRange = document.getElementById("priceRange");
 const priceValue = document.getElementById("priceValue");
@@ -58,19 +62,68 @@ priceRange.addEventListener("input", () => {
   });
 });
 
-// code to handle the protected button click
+// for searchInput
+// getting all the container that contains the card content
+const cardContainer = document.querySelectorAll(".card .card-content");
 
+// Add search functionality
+document.getElementById("searchInput").addEventListener("input", function () {
+  const query = this.value.toLowerCase().trim();
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    const location = card
+      .querySelector(".location")
+      .getAttribute("data-location")
+      .toLowerCase();
+
+    if (location.includes(query)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+});
+
+// code to handle the protected button click and landlord link
 function isLoggedIn() {
   return localStorage.getItem("user") !== null;
 }
 
-document.getElementById("protectedBtn").addEventListener("click", function () {
-  const user = localStorage.getItem("user");
+const protectedButton = document.querySelectorAll(".protectedBtn");
 
+protectedButton.forEach((button) => {
+  button.addEventListener("click", function () {
+    const user = localStorage.getItem("user");
+
+    if (!isLoggedIn()) {
+      alert("You must be logged in to view details.");
+      window.location.href = "../FrontEnd/loginPage.html";
+    } else {
+      const parsedUser = JSON.parse(user);
+      if (parsedUser.role === "student") {
+        window.location.href = "../FrontEnd/details.html";
+      } else {
+        alert("Landlords cannot view property details.");
+        window.location.href = "../FrontEnd/index.html";
+      }
+    }
+  });
+});
+
+// code to handle the landlord link if not logged in
+document.getElementById("landlordBtn").addEventListener("click", function (e) {
+  const user = localStorage.getItem("user");
   if (!isLoggedIn()) {
-    alert("You must be logged in to view details.");
+    alert("You must be logged in to access the landlord page.");
+    e.preventDefault();
     window.location.href = "../FrontEnd/loginPage.html";
   } else {
-    window.location.href = "../FrontEnd/details.html";
+    const parsedUser = JSON.parse(user);
+    if (parsedUser.role !== "landlord") {
+      alert("Only landlords can access the landlord page.");
+      e.preventDefault();
+      window.location.href = "../FrontEnd/index.html";
+    }
   }
 });

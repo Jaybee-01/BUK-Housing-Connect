@@ -23,15 +23,19 @@
         </a>
 
         <div id="login">
-            <li><a href="loginPage.html">Login</a></li>
+            <li><a href="loginPage.html" id="loginBtn">Login</a></li>
             <li><a href="signupPage.html" id="signup">Sign Up</a></li>
+
+            <!-- this shows when logged in -->
+            <button id="logout" class="hidden signup">Logout</button>
         </div>
     </header>
 
     <main>
         <section id="new-property">
             <div id="welcome">
-                <h2>Welcome, name!</h2>
+                <h2 class="hidden" id="userInfo">Welcome</h2>
+
                 <div>
                     <button id="addNew">Add New Property</button>
                     <button id="close" class="active">Cancel</button>
@@ -122,7 +126,44 @@
 
     <script>
 
-// this is to toggle the add new property form
+        // this is for the navbar which user logged in
+        window.onload = function () {
+            const user = JSON.parse(localStorage.getItem("user"));
+
+            const loginBtn = document.getElementById("loginBtn");
+            const signupBtn = document.getElementById("signup");
+            const userInfo = document.getElementById("userInfo");
+            const logoutBtn = document.getElementById("logout");
+
+            if (user) {
+                loginBtn.style.display = "none";
+                signupBtn.style.display = "none";
+
+                userInfo.style.display = "block";
+                userInfo.textContent = `${user.role === "student" || "landlord" ? "Welcome Mr." : "Welcome Mr."
+                    } ${user.name.split(" ")[0]}`;
+                logoutBtn.style.display = "block";
+            } else {
+                loginBtn.style.display = "block";
+                signupBtn.style.display = "block";
+
+                userInfo.style.display = "none";
+                logoutBtn.style.display = "none";
+            }
+
+            // logout functionality
+            logoutBtn.addEventListener("click", function () {
+                if (user) {
+                    localStorage.removeItem("user");
+
+                    if (user.role === "landlord") {
+                        window.location.href = "../FrontEnd/index.html";
+                    }
+                }
+            });
+        };
+
+        // this is to toggle the add new property form
         document.getElementById('addNew').addEventListener('click', function () {
             document.getElementById('propertyForm').classList.remove('active');
             document.getElementById('addNew').classList.add('active');
@@ -136,7 +177,7 @@
         });
 
 
-// this is to add a new property to the table
+        // this is to add a new property to the table
         document.getElementById('propertyForm').addEventListener('submit', function (e) {
             e.preventDefault();
 
@@ -164,8 +205,8 @@
 
 
 
-// this is to reset the form after submission
-        document.getElementById('propertyForm').reset();
+            // this is to reset the form after submission
+            document.getElementById('propertyForm').reset();
         })
 
     </script>
